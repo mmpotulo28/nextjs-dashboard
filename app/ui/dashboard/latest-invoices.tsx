@@ -18,10 +18,13 @@ export default async function LatestInvoices({
 						return (
 							<div
 								key={invoice.id}
-								className={clsx('flex flex-row items-center justify-between py-4', {
-									'border-t': i !== 0,
-								})}>
-								<div className='flex items-center'>
+								className={clsx(
+									'hover:text-blue-600 flex flex-row items-center justify-between py-4',
+									{
+										'border-t': i !== 0,
+									},
+								)}>
+								<div className='hover:text-blue-600 flex items-center'>
 									<Image
 										src={invoice.image_url}
 										alt={`${invoice.name}'s profile picture`}
